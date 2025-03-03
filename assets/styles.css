@@ -15,12 +15,14 @@ body {
 /* Header */
 header {
     width: 100%;
-    background-color: #F7EFBD;
     text-align: center;
     padding: 20px 0;
     box-sizing: border-box;
 }
-
+header img {
+            height: 300px; 
+            width: auto; 
+        }
 /* Main Content Container */
 .container {
     max-width: 700px;
