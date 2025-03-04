@@ -1,18 +1,37 @@
-<!DOCTYPE html>
+<!<!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
+	<meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ZUMA Seminar</title>
-    <link rel="stylesheet" href="assets/styles.css">
+    <title>ZUMA-NR</title>
+    <link rel="stylesheet" href="styles.css">
+	<script>
+    document.addEventListener("DOMContentLoaded", function() {
+            // 确保所有 .abstract 默认隐藏
+            let abstracts = document.querySelectorAll(".abstract");
+            abstracts.forEach(abstract => {
+                abstract.style.display = "none";
+		abstract.style.fontSize = "14px"; 
+        abstract.style.color = "gray"; 
+        abstract.style.fontFamily = "Arial, sans-serif";
+            });
+        });
+
+        function toggleAbstract(id) {
+            var abstract = document.getElementById(id);
+            if (abstract.style.display === "none") {
+                abstract.style.display = "block";
+            } else {
+                abstract.style.display = "none";
+            }
+        }
+</script>
 </head>
-
-
 <body>
 
-    <header>
-        <img src="assets/zuma_nr.jpg" alt="ZUMA-NR Logo">
-    </header>
+<header>
+    <h1><b>ZUMA<br>Number Theory and Representation Theory Seminar</b></h1>
+</header>
 	
 <a href="/" id="backToHome" class="floating-button">⌂ Home</a>
 
