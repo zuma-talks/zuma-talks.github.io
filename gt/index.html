@@ -27,6 +27,24 @@
         }
 </script>
 
+<style>
+    .collapsible {
+      cursor: pointer;
+      font-size: 20px;
+      font-weight: bold;
+      margin: 10px 0;
+    }
+
+    .content {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.4s ease-out;
+    }
+
+    .content.open {
+      max-height: 500px; /* adjust if you expect more content */
+    }
+  </style>
 	
 </head>
 <body>
@@ -160,8 +178,8 @@
 </ul>
 <hr class="line-light">
 
-
-    <h2>Spring 2025 Schedule</h2>
+  <div class="collapsible">Spring 2025 Schedule</div>
+  <div class="content">
 
     <hr class="line-dark">
 
@@ -479,6 +497,17 @@ This talk is based on a combination of several joint works with Mike Hill, Hana 
     </ul>
     </ul>
     <br><br>
+	</div>
+	
+  <script>
+    const collapsible = document.querySelector(".collapsible");
+    const content = document.querySelector(".content");
+
+    collapsible.addEventListener("click", () => {
+      content.classList.toggle("open");
+    });
+  </script>
+	
 <!--     <hr>
        <h2>Past Talks</h2>
     <hr class="line-dark">
