@@ -27,22 +27,34 @@
         }
 </script>
 
-<style>
+  <style>
     .collapsible {
       cursor: pointer;
       font-size: 20px;
       font-weight: bold;
       margin: 10px 0;
+      color: darkblue;
     }
 
     .content {
       max-height: 0;
       overflow: hidden;
       transition: max-height 0.4s ease-out;
+      background: #f8f8f8;
+      padding: 0 10px;
     }
 
     .content.open {
       max-height: 4500px; /* adjust if you expect more content */
+      padding: 10px;
+    }
+
+    .collapse-btn {
+      cursor: pointer;
+      color: darkred;
+      text-decoration: underline;
+      display: inline-block;
+      margin-top: 10px;
     }
   </style>
 	
@@ -497,16 +509,28 @@ This talk is based on a combination of several joint works with Mike Hill, Hana 
     </ul>
     </ul>
     <br><br>
-	</div>
-	
-  <script>
-    const collapsible = document.querySelector(".collapsible");
-    const content = document.querySelector(".content");
+	  
+    <span class="collapse-btn">Collapse Spring 2025 Schedule</span>
+  </div>
 
-    collapsible.addEventListener("click", () => {
-      content.classList.toggle("open");
+  <script>
+    // Find all collapsibles on the page
+    document.querySelectorAll(".collapsible").forEach((header, idx) => {
+      const content = header.nextElementSibling;  // assumes content follows header
+      const collapseBtn = content.querySelector(".collapse-btn");
+
+      // Toggle when header is clicked
+      header.addEventListener("click", () => {
+        content.classList.toggle("open");
+      });
+
+      // Collapse button inside
+      collapseBtn.addEventListener("click", () => {
+        content.classList.remove("open");
+      });
     });
   </script>
+
 	
 <!--     <hr>
        <h2>Past Talks</h2>
