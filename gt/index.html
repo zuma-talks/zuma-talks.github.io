@@ -45,7 +45,7 @@
     }
 
     .content.open {
-      max-height: 4500px; /* adjust if you expect more content */
+      max-height: 5500px; /* adjust if you expect more content */
       padding: 10px;
     }
 
@@ -513,14 +513,22 @@ This talk is based on a combination of several joint works with Mike Hill, Hana 
     <span class="collapse-btn">Collapse Spring 2025 Schedule</span>
   </div>
 
-  <script>
-    // Find all collapsibles on the page
-    document.querySelectorAll(".collapsible").forEach((header, idx) => {
-      const content = header.nextElementSibling;  // assumes content follows header
+
+
+	 <script>
+    const allContents = document.querySelectorAll(".content");
+
+    document.querySelectorAll(".collapsible").forEach((header) => {
+      const content = header.nextElementSibling;
       const collapseBtn = content.querySelector(".collapse-btn");
 
       // Toggle when header is clicked
       header.addEventListener("click", () => {
+        // First close all others
+        allContents.forEach(c => {
+          if (c !== content) c.classList.remove("open");
+        });
+        // Then toggle the clicked one
         content.classList.toggle("open");
       });
 
@@ -530,7 +538,6 @@ This talk is based on a combination of several joint works with Mike Hill, Hana 
       });
     });
   </script>
-
 	
 <!--     <hr>
        <h2>Past Talks</h2>
