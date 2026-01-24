@@ -78,11 +78,16 @@
 
     <hr>
 
+	
 	<h2>Fall 2025 Schedule</h2>
 
     <hr class="line-dark">
 
 	<!-- Seminar Schedule -->
+
+
+	<div class="collapsible">Fall 2025 Schedule</div>
+<div class="content">
 
 <b>Sep 15, 2025 (SPECIAL LOCATION: the lecture room of IASM)</b>
 <ul>
@@ -476,6 +481,33 @@ In my research talk, I'll present an effective strategy to construct irregular A
   </li>
 </ul>
 <hr class="line-light">
+
+  <span class="collapse-btn">Collapse Fall 2025 Schedule</span>
+</div>
+
+<script>
+  const allContents = document.querySelectorAll(".content");
+
+  document.querySelectorAll(".collapsible").forEach((header) => {
+    const content = header.nextElementSibling;
+    const collapseBtn = content.querySelector(".collapse-btn");
+
+    // Toggle when header is clicked
+    header.addEventListener("click", () => {
+      allContents.forEach(c => {
+        if (c !== content) c.classList.remove("open");
+      });
+      content.classList.toggle("open");
+    });
+
+    // Collapse button inside
+    collapseBtn.addEventListener("click", () => {
+      content.classList.remove("open");
+    });
+  });
+</script>
+
+
 
 
 
