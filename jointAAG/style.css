@@ -1,0 +1,111 @@
+/* General Styles */
+body {
+    background-color: white;
+    color: darkslategray;
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+    justify-content: flex-start;
+}
+
+/* Header */
+header {
+    width: 100%;
+    background-color: #F7EFBD;
+    text-align: center;
+    padding: 20px 0;
+    box-sizing: border-box;
+}
+
+/* Main Content Container */
+.container {
+    max-width: 700px;
+    width: 90%;
+    padding: 20px;
+    box-sizing: border-box;
+    background: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Text Sizes */
+h1 {
+    font-size: 28px; /* Larger title */
+    color: black;
+    margin: 0;
+}
+
+h2 {
+    font-size: 22px; /* Subtitle size */
+}
+
+p {
+    font-size: 16px; /* Default text size */
+}
+
+.small-text {
+    font-size: 14px; /* Smaller text */
+    color: gray;
+}
+
+.large-text {
+    font-size: 20px; /* Emphasized text */
+    font-weight: bold;
+}
+
+/* Lists */
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+li {
+    font-size: 16px;
+    margin: 5px 0;
+}
+
+/* Line Styles */
+.line-dark {
+    border: none;
+    height: 1px;
+    background-color: #ddd;
+    margin: 20px 0;
+}
+
+.line-light {
+    border: none;
+    height: 1px;
+    background-color: #eee;
+    margin: 20px 0;
+}
+
+.floating-button {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    outline: none;
+    color: #333;
+    background-color: #F7EFBD; /* 按钮颜色 */
+    border: none;
+    border-radius: 15px;
+    box-shadow: 0 9px #999;
+    position: fixed; /* 固定位置 */
+    bottom: 20px; /* 距离底部的距离 */
+    right: 30px; /* 距离右边的距离 */
+    transition-duration: 0.4s; /* 动画过渡时间 */
+}
+
+.floating-button:hover {background-color: #3e8e41;} /* 鼠标悬停时的颜色 */
+
+.floating-button:active {
+    background-color: #3e8e41;
+    box-shadow: 0 5px #666;
+    transform: translateY(4px);
+}
